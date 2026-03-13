@@ -63,12 +63,3 @@ Clicking an item copies it to clipboard and automatically pastes into the app yo
 3. Ensure the checkbox is enabled
 4. Restart the clipboard app after granting permission
 
-## Pushing to GitHub
-
-If you've cloned this and want to push to your own repo:
-
-```bash
-# Create a new repo on GitHub (e.g. github.com/yourusername/clipboard), then:
-git remote add origin https://github.com/YOUR_USERNAME/clipboard.git
-git push -u origin main
-```
