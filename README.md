@@ -5,13 +5,11 @@ A Windows Win+V style clipboard manager for your Mac. Press **⌘⌥V** (Cmd+Opt
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/clipboard.git
+git clone https://github.com/Jarvis0p/Clipboard-Manager-MacOS.git
 cd clipboard
 npm install
 npm start
 ```
-
-> Replace `YOUR_USERNAME` with your GitHub username after you create the repo.
 
 ## Requirements
 
