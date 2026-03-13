@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Clipboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Clipboard</h1>
+      <p class="hint">Press <kbd>⌘</kbd><kbd>⌥</kbd><kbd>V</kbd> anytime to open</p>
+      <button class="close-btn" id="closeBtn" aria-label="Close">×</button>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search clipboard history..." autocomplete="off">
+    </div>
+
+    <div class="history" id="history">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">📋</div>
+        <p>Copy something to get started</p>
+        <p class="empty-hint">Your clipboard history will appear here</p>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
