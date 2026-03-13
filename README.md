@@ -63,3 +63,44 @@ Clicking an item copies it to clipboard and automatically pastes into the app yo
 3. Ensure the checkbox is enabled
 4. Restart the clipboard app after granting permission
 
+## Building a Release (DMG)
+
+To create a distributable DMG that users can download and install:
+
+```bash
+npm run build
+```
+
+The DMG will be in the `dist/` folder (e.g. `dist/Clipboard-1.0.0-arm64.dmg`). Users can:
+1. Open the DMG
+2. Drag "Clipboard" to Applications
+3. Launch it from Applications (or Spotlight)
+
+For the built app, add **Clipboard** (not Terminal/Electron) to Accessibility in System Settings.
+
+> **Note:** The default build targets Apple Silicon (M1/M2/M3). For Intel Macs, run `npm run build:universal` to create both arm64 and x64 DMGs.
+
+## Creating GitHub Releases
+
+**Option A: Manual**
+1. Build the DMG: `npm run build`
+2. Go to your repo on GitHub → **Releases** → **Create a new release**
+3. Tag version (e.g. `v1.0.0`), add release notes
+4. Upload the `.dmg` file from `dist/` as an asset
+5. Publish the release
+
+**Option B: Automated (GitHub Actions)**
+1. Create and push a tag: `git tag v1.0.0 && git push origin v1.0.0`
+2. The workflow will build the DMG and attach it to the release automatically
+
+Users can then download the DMG directly without needing Node.js.
+
+## Pushing to GitHub
+
+If you've cloned this and want to push to your own repo:
+
+```bash
+# Create a new repo on GitHub (e.g. github.com/yourusername/clipboard), then:
+git remote add origin https://github.com/YOUR_USERNAME/clipboard.git
+git push -u origin main
+```
